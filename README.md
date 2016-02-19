@@ -17,26 +17,26 @@ $ npm install worker-farm-cli --global
 
 ## Usage
 
-```bash
-$ worker-farm --help
+```
+Usage
+  $ worker-farm [options] <file>
 
-  Launch a farm of worker from the CLI.
+Options
+  -n, --cores   [default=numCPUs] Cores to use for spawn workers.
 
-  Usage
-    $ worker-farm [options] <file>
+  -w, --workers [default=1] Workers to spawn per each core.
 
-  Options
-    -n, --cores   [default=numCPUs] Cores to use for spawn workers.
+  -d, --delay   [default=1000ms] Waiting time between spawning workers.
 
-    -w, --workers [default=1] Workers to spawn per each core.
+  -r, --retry   [default=Infinity] Max number of call requeues after unexpected worker termination.
 
-    -d, --delay   [default=1000ms] Waiting time between spawning workers.
 
-    -r, --retry   [default=Infinity] Max number of call requeues after unexpected worker termination.
+It's also possible load [options] creating a 'worker-farm.opts' file on the path of <file>.
 
-  Examples
-    $ worker-farm process.js
-    $ worker-farm -w 1 -n 1 process.js
+Examples
+  $ worker-farm process.js
+  $ worker-farm -w 1 -n 1 process.js
+
 ```
 
 ## License

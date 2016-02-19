@@ -10,6 +10,9 @@ Options
 
   -r, --retry   [default=Infinity] Max number of call requeues after unexpected worker termination.
 
+
+It's also possible load [options] creating a 'worker-farm.opts' file on the path of <file>.
+
 Examples
   $ worker-farm process.js
   $ worker-farm -w 1 -n 1 process.js
