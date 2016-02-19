@@ -3,35 +3,24 @@
 'use strict'
 
 var path = require('path')
+var config = require('./config')
 var range = require('lodash.range')
 var pkg = require('../package.json')
 var eachAsync = require('each-async')
 var workerFarm = require('worker-farm')
-var numCPUs = require('os').cpus().length
+var minimistOptions = require('./minimist-options')
 
 require('update-notifier')({pkg: pkg}).notify()
 
 var cli = require('meow')({
   pkg: pkg,
-  help: require('fs').readFileSync(path.join(__dirname, 'help.txt'), 'utf8')
-}, {
-  alias: {
-    n: 'cores',
-    w: 'workers',
-    r: 'retry',
-    d: 'delay',
-  },
-  default: {
-    n: numCPUs,
-    w: 1,
-    r: Infinity,
-    d: 1000
-  }
-})
-
-if (cli.input.length === 0) cli.showHelp()
+  help: require('fs').readFileSync(path.join(__dirname, 'help.txt'), 'utf8'),
+  argv: require('./config')
+}, minimistOptions)
 
 var filename = cli.input[0]
+if (!filename) cli.showHelp()
+
 var flags = cli.flags
 
 var fileArgs = process.argv.slice(process.argv.indexOf(filename) + 1)
