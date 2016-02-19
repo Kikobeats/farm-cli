@@ -1,0 +1,15 @@
+Usage
+  $ worker-farm [options] <file>
+
+Options
+  -n, --cores   [default=numCPUs] Cores to use for spawn workers.
+
+  -w, --workers [default=1] Workers to spawn per each core.
+
+  -d, --delay   [default=1000ms] Waiting time between spawning workers.
+
+  -r, --retry   [default=Infinity] Max number of call requeues after unexpected worker termination.
+
+Examples
+  $ worker-farm process.js
+  $ worker-farm -w 1 -n 1 process.js
