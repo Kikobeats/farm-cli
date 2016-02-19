@@ -2,27 +2,36 @@
   "name": "worker-farm-cli",
   "description": "Launch a farm of worker from the CLI.",
   "homepage": "https://github.com/Kikobeats/worker-farm-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "./index.js",
   "bin": {
     "worker-farm": "./bin/index.js"
   },
   "author": {
-    "email": "josefrancisco.verdu@gmail.com",
     "name": "Kiko Beats",
+    "email": "josefrancisco.verdu@gmail.com",
     "url": "https://github.com/Kikobeats"
   },
-  "repository": "Kikobeats/worker-farm-cli",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kikobeats/worker-farm-cli.git"
+  },
   "bugs": {
     "url": "https://github.com/Kikobeats/worker-farm-cli/issues"
   },
-  "keywords": ["farm", "processing", "child", "worker", "cli"],
+  "keywords": [
+    "child",
+    "cli",
+    "farm",
+    "processing",
+    "worker"
+  ],
   "dependencies": {
+    "each-async": "~1.1.1",
+    "lodash.range": "~3.1.2",
     "meow": "~3.7.0",
     "update-notifier": "~0.6.0",
-    "worker-farm": "~1.3.1",
-    "lodash.range": "~3.1.2",
-    "each-async": "~1.1.1"
+    "worker-farm": "~1.3.1"
   },
   "devDependencies": {
     "git-dirty": "latest",
