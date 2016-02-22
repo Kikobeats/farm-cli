@@ -5,8 +5,9 @@
 var path = require('path')
 var range = require('lodash.range')
 var pkg = require('../package.json')
-var eachAsync = require('each-async')
+var debug = require('debug')(pkg.name)
 var workerFarm = require('worker-farm')
+var series = require('run-series')
 var minimistOptions = require('./minimist-options')
 
 require('update-notifier')({pkg: pkg}).notify()
@@ -21,6 +22,8 @@ var filename = cli.input[0]
 if (!filename) cli.showHelp()
 
 var flags = cli.flags
+
+debug(flags)
 
 var fileArgs = process.argv.slice(process.argv.indexOf(filename) + 1)
 var workers = flags.workers * flags.cores
@@ -83,20 +86,24 @@ var farmOptions = {
   // the first request comes through.
   autoStart: true
 }
-
 var workersRange = range(workers)
 var spawnWorker = workerFarm(farmOptions, path.resolve(filename))
 
-function spawnDelay (workerArgs, cb) {
-  spawnWorker(workerArgs, process.exit)
-  setTimeout(cb, flags.delay)
+function spawnWorkerDelay (workerArgs) {
+  return function (cb) {
+    debug('spawning %s', workerArgs)
+    spawnWorker(workerArgs, process.exit)
+    setTimeout(cb, flags.delay)
+  }
 }
 
 function closeFarm () {
   workerFarm.end(spawnWorker)
 }
 
-eachAsync(workersRange, function (worker, index, next) {
+var spawnWorkers = workersRange.map(function (worker) {
   var workerArgs = fileArgs.concat(['--worker=' + worker])
-  return spawnDelay(workerArgs, next)
-}, closeFarm)
+  return spawnWorkerDelay(workerArgs)
+})
+
+series(spawnWorkers, closeFarm)

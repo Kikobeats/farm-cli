@@ -27,12 +27,13 @@
     "worker"
   ],
   "dependencies": {
-    "each-async": "~1.1.1",
     "exists-file": "~1.0.0",
     "lodash.range": "~3.1.2",
     "meow": "~3.7.0",
     "update-notifier": "~0.6.0",
-    "worker-farm": "~1.3.1"
+    "worker-farm": "~1.3.1",
+    "debug": "~2.2.0",
+    "run-series": "~1.1.4"
   },
   "devDependencies": {
     "git-dirty": "latest",
