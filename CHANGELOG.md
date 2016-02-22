@@ -1,8 +1,17 @@
+<a name="1.1.4"></a>
+## 1.1.4 (2016-02-22)
+
+
+* Load file if params are not present ([5b3686c](https://github.com/kikobeats/worker-farm-cli/commit/5b3686c))
+
+
+
 <a name="1.1.3"></a>
 ## 1.1.3 (2016-02-22)
 
 
 * Fix load file passing params too ([08beda5](https://github.com/kikobeats/worker-farm-cli/commit/08beda5))
+* Release 1.1.3 ([0adce17](https://github.com/kikobeats/worker-farm-cli/commit/0adce17))
 
 
 
@@ -38,8 +47,8 @@
 # 1.0.0 (2016-02-19)
 
 
-* Release 1.0.0 ([02abf8e](https://github.com/kikobeats/worker-farm-cli/commit/02abf8e))
 * first commit ([3a50043](https://github.com/kikobeats/worker-farm-cli/commit/3a50043))
+* Release 1.0.0 ([02abf8e](https://github.com/kikobeats/worker-farm-cli/commit/02abf8e))
 * updated ([b9aec4f](https://github.com/kikobeats/worker-farm-cli/commit/b9aec4f))
 
 
