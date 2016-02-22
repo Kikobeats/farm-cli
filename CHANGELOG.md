@@ -1,7 +1,16 @@
+<a name="1.1.2"></a>
+## 1.1.2 (2016-02-22)
+
+
+* Fix spawn delay ([fe846c5](https://github.com/kikobeats/worker-farm-cli/commit/fe846c5))
+
+
+
 <a name="1.1.1"></a>
 ## 1.1.1 (2016-02-22)
 
 
+* Release 1.1.1 ([8c30de3](https://github.com/kikobeats/worker-farm-cli/commit/8c30de3))
 * Remove unused variable ([74c4b40](https://github.com/kikobeats/worker-farm-cli/commit/74c4b40))
 
 
