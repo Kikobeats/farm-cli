@@ -3,7 +3,6 @@
 'use strict'
 
 var path = require('path')
-var config = require('./config')
 var range = require('lodash.range')
 var pkg = require('../package.json')
 var eachAsync = require('each-async')
