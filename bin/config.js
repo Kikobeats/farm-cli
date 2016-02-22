@@ -14,7 +14,7 @@ var FILENAME = 'worker-farm.opts'
 
 function readConfig (filepath) {
   var yargs = process.argv.slice(2)
-  if (yargs.length > 1) return yargs
+  if (yargs.length !== 1) return yargs
 
   var filepath = path.resolve(yargs[0], FILENAME)
   if (!existFile(filepath)) return yargs
