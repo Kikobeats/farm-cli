@@ -1,8 +1,17 @@
+<a name="1.1.3"></a>
+## 1.1.3 (2016-02-22)
+
+
+* Fix load file passing params too ([08beda5](https://github.com/kikobeats/worker-farm-cli/commit/08beda5))
+
+
+
 <a name="1.1.2"></a>
 ## 1.1.2 (2016-02-22)
 
 
 * Fix spawn delay ([fe846c5](https://github.com/kikobeats/worker-farm-cli/commit/fe846c5))
+* Release 1.1.2 ([394518c](https://github.com/kikobeats/worker-farm-cli/commit/394518c))
 
 
 
@@ -29,8 +38,8 @@
 # 1.0.0 (2016-02-19)
 
 
-* first commit ([3a50043](https://github.com/kikobeats/worker-farm-cli/commit/3a50043))
 * Release 1.0.0 ([02abf8e](https://github.com/kikobeats/worker-farm-cli/commit/02abf8e))
+* first commit ([3a50043](https://github.com/kikobeats/worker-farm-cli/commit/3a50043))
 * updated ([b9aec4f](https://github.com/kikobeats/worker-farm-cli/commit/b9aec4f))
 
 
