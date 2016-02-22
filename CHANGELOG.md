@@ -1,8 +1,17 @@
+<a name="1.1.1"></a>
+## 1.1.1 (2016-02-22)
+
+
+* Remove unused variable ([74c4b40](https://github.com/kikobeats/worker-farm-cli/commit/74c4b40))
+
+
+
 <a name="1.1.0"></a>
 # 1.1.0 (2016-02-19)
 
 
 * Be possible load params by file ([ab7dc24](https://github.com/kikobeats/worker-farm-cli/commit/ab7dc24))
+* Release 1.1.0 ([6e528be](https://github.com/kikobeats/worker-farm-cli/commit/6e528be))
 * updated documentation ([27b1732](https://github.com/kikobeats/worker-farm-cli/commit/27b1732))
 
 
