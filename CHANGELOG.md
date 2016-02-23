@@ -1,8 +1,17 @@
+<a name="1.3.0"></a>
+# 1.3.0 (2016-02-23)
+
+
+* Be possible load opts for file ([2602722](https://github.com/kikobeats/worker-farm-cli/commit/2602722))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2016-02-23)
 
 
 * Extend support to 0.10 ([f7174eb](https://github.com/kikobeats/worker-farm-cli/commit/f7174eb))
+* Release 1.2.0 ([18a32a5](https://github.com/kikobeats/worker-farm-cli/commit/18a32a5))
 * Use load-opts package ([3f42aef](https://github.com/kikobeats/worker-farm-cli/commit/3f42aef))
 
 
