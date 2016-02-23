@@ -3,11 +3,12 @@
 'use strict'
 
 var path = require('path')
+var series = require('run-series')
+var loadOpts = require('load-opts')('worker-farm')
 var range = require('lodash.range')
 var pkg = require('../package.json')
 var debug = require('debug')(pkg.name)
 var workerFarm = require('worker-farm')
-var series = require('run-series')
 var minimistOptions = require('./minimist-options')
 
 require('update-notifier')({pkg: pkg}).notify()
@@ -15,7 +16,7 @@ require('update-notifier')({pkg: pkg}).notify()
 var cli = require('meow')({
   pkg: pkg,
   help: require('fs').readFileSync(path.join(__dirname, 'help.txt'), 'utf8'),
-  argv: require('./config')
+  argv: loadOpts()
 }, minimistOptions)
 
 var filename = cli.input[0]
