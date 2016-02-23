@@ -1,8 +1,18 @@
+<a name="1.2.0"></a>
+# 1.2.0 (2016-02-23)
+
+
+* Extend support to 0.10 ([f7174eb](https://github.com/kikobeats/worker-farm-cli/commit/f7174eb))
+* Use load-opts package ([3f42aef](https://github.com/kikobeats/worker-farm-cli/commit/3f42aef))
+
+
+
 <a name="1.1.5"></a>
 ## 1.1.5 (2016-02-22)
 
 
 * Add none yargs case ([88fa15c](https://github.com/kikobeats/worker-farm-cli/commit/88fa15c))
+* Release 1.1.5 ([3637b30](https://github.com/kikobeats/worker-farm-cli/commit/3637b30))
 
 
 
@@ -56,8 +66,8 @@
 # 1.0.0 (2016-02-19)
 
 
-* Release 1.0.0 ([02abf8e](https://github.com/kikobeats/worker-farm-cli/commit/02abf8e))
 * first commit ([3a50043](https://github.com/kikobeats/worker-farm-cli/commit/3a50043))
+* Release 1.0.0 ([02abf8e](https://github.com/kikobeats/worker-farm-cli/commit/02abf8e))
 * updated ([b9aec4f](https://github.com/kikobeats/worker-farm-cli/commit/b9aec4f))
 
 
