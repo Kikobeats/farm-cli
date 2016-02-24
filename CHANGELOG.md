@@ -1,8 +1,17 @@
+<a name="1.3.1"></a>
+## 1.3.1 (2016-02-24)
+
+
+* Upgrade load-opts dependency ([b6575d9](https://github.com/kikobeats/worker-farm-cli/commit/b6575d9))
+
+
+
 <a name="1.3.0"></a>
 # 1.3.0 (2016-02-23)
 
 
 * Be possible load opts for file ([2602722](https://github.com/kikobeats/worker-farm-cli/commit/2602722))
+* Release 1.3.0 ([2555521](https://github.com/kikobeats/worker-farm-cli/commit/2555521))
 
 
 
