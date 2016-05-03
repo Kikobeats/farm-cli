@@ -1,3 +1,11 @@
+<a name="1.3.3"></a>
+## 1.3.3 (2016-05-03)
+
+* Remove unnecessary dep ([362f7bb](https://github.com/kikobeats/worker-farm-cli/commit/362f7bb))
+* chore(package): update lodash.findindex to version 4.3.0 ([6f9a433](https://github.com/kikobeats/worker-farm-cli/commit/6f9a433))
+
+
+
 <a name="1.3.1"></a>
 ## 1.3.1 (2016-02-24)
 
