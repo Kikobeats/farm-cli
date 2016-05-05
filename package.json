@@ -34,7 +34,7 @@
     "lodash.range": "~3.1.2",
     "meow": "~3.7.0",
     "run-series": "~1.1.4",
-    "update-notifier": "~0.6.0",
+    "update-notifier": "~0.7.0",
     "worker-farm": "~1.3.1"
   },
   "devDependencies": {
