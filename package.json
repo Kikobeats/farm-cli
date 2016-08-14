@@ -31,7 +31,7 @@
     "is-directory": "~0.3.0",
     "load-opts": "~1.2.0",
     "lodash.findindex": "~4.5.0",
-    "lodash.range": "~3.1.2",
+    "lodash.range": "~3.2.0",
     "meow": "~3.7.0",
     "run-series": "~1.1.4",
     "update-notifier": "~1.0.0",
