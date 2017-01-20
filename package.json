@@ -27,7 +27,7 @@
     "worker"
   ],
   "dependencies": {
-    "debug": "~2.2.0",
+    "debug": "~2.6.0",
     "is-directory": "~0.3.0",
     "load-opts": "~1.2.0",
     "lodash.findindex": "~4.6.0",
