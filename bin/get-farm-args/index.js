@@ -10,8 +10,6 @@ const pkg = require('../../package.json')
 const defaults = require('./default')
 const alias = require('./alias')
 
-const debug = require('debug')(pkg.name)
-
 function readInput (argv) {
   return meow({
     argv,
