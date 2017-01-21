@@ -7,7 +7,6 @@ require('update-notifier')({pkg}).notify()
 const debug = require('debug')(pkg.name)
 
 const workerFarm = require('worker-farm')
-const range = require('lodash.range')
 const minimist = require('minimist')
 const series = require('run-series')
 const path = require('path')
@@ -28,7 +27,7 @@ const {file: fileOpts} = argv
 const {flags: farmOpts} = cli
 const {delayBetweenWorkers} = farmOpts
 const numWorkers = getNumWorkers(farmOpts)
-const workersRange = range(numWorkers)
+const workersRange = [...Array(10).keys(numWorkers)]
 
 const spawnWorkers = workersRange.map(function (worker) {
   const workerArgs = getWorkerArgs(fileOpts, worker)
