@@ -1,5 +1,8 @@
 'use strict'
 
+const isDirectory = require('is-directory').sync
+const isFile = require('is-file')
+
 function getFarmArgs (args, fileIndex) {
   const start = 0
   const end = fileIndex + 1
@@ -13,7 +16,7 @@ function getFileArgs (args, fileIndex) {
 }
 
 function parseArgs (args) {
-  const fileIndex = args.findIndex(arg => arg.includes('/'))
+  const fileIndex = args.findIndex(arg => isFile(arg) || isDirectory(arg))
 
   return {
     farm: getFarmArgs(args, fileIndex),
