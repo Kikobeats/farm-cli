@@ -29,15 +29,14 @@ Options
 
   -d, --delay   [default=1000ms] Waiting time between spawning workers.
 
-  -r, --retry   [default=Infinity] Max number of call requeues after unexpected worker termination.
+  -r, --retries   [default=Infinity] Max number of call requeues after unexpected worker termination.
 
-
-It's also possible load [options] creating a 'worker-farm.opts' file on the path of <file>.
+It's possible to load [options] from file, creating '.farm' JSON file on the path of <file>.
 
 Examples
-  $ worker-farm process.js
-  $ worker-farm -w 1 -n 1 process.js
-
+  $ farm process
+  $ farm -w 1 -n 1 process
+  $ farm -w 1 -n 1 process foo=bar
 ```
 
 ## License
