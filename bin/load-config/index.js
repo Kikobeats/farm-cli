@@ -13,7 +13,7 @@ function getLasDirectory (filename) {
 }
 
 function getConfigPath (folder) {
-  return path.resolve(folder, '.farm')
+  return path.resolve(folder, '.farmrc')
 }
 
 function readConfig (filepath) {
