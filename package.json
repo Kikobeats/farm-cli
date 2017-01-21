@@ -8,8 +8,8 @@
     "worker-farm": "bin/cli/index.js"
   },
   "author": {
-    "name": "Kiko Beats",
     "email": "josefrancisco.verdu@gmail.com",
+    "name": "Kiko Beats",
     "url": "https://github.com/Kikobeats"
   },
   "repository": {
@@ -19,9 +19,6 @@
   "bugs": {
     "url": "https://github.com/Kikobeats/worker-farm-cli/issues"
   },
-  "files": [
-    "bin"
-  ],
   "keywords": [
     "child",
     "cli",
@@ -31,35 +28,39 @@
   ],
   "dependencies": {
     "debug": "~2.6.0",
-    "is-directory": "~0.3.0",
-    "load-opts": "~1.2.0",
-    "lodash.findindex": "~4.6.0",
     "lodash.range": "~3.2.0",
     "meow": "~3.7.0",
     "run-series": "~1.1.4",
-    "update-notifier": "~1.0.0",
+    "update-notifier": "~1.0.3",
     "worker-farm": "~1.3.1"
   },
   "devDependencies": {
+    "coveralls": "latest",
     "git-dirty": "latest",
     "mocha": "latest",
+    "nyc": "latest",
     "should": "latest",
-    "standard": "latest"
+    "standard": "latest",
+    "standard-markdown": "latest"
   },
   "engines": {
     "node": ">= 4"
   },
+  "files": [
+    "bin"
+  ],
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard-markdown && standard bind",
+    "pretest": "npm run lint",
+    "test": "nyc mocha"
+  },
+  "license": "MIT",
   "standard": {
     "globals": [
       "describe",
       "it"
     ]
-  },
-  "scripts": {
-    "clean": "rm -rf node_modules",
-    "lint": "standard lib",
-    "pretest": "npm run lint",
-    "test": "echo 'not yet'"
-  },
-  "license": "MIT"
+  }
 }
