@@ -2,7 +2,7 @@
   "name": "worker-farm-cli",
   "description": "Launch a farm of worker from the CLI.",
   "homepage": "https://github.com/Kikobeats/worker-farm-cli",
-  "version": "1.3.3",
+  "version": "2.0.0",
   "main": "bin",
   "bin": {
     "worker-farm": "bin/cli/index.js"

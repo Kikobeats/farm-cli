@@ -1,3 +1,27 @@
+<a name="2.0.0"></a>
+# 2.0.0 (2017-01-21)
+
+* Add coveralls ([2539bf5](https://github.com/kikobeats/worker-farm-cli/commit/2539bf5))
+* Add load from file ([7da2f02](https://github.com/kikobeats/worker-farm-cli/commit/7da2f02))
+* Add rc postfix ([85d1188](https://github.com/kikobeats/worker-farm-cli/commit/85d1188))
+* Better way to determinate the file ([1ab2206](https://github.com/kikobeats/worker-farm-cli/commit/1ab2206))
+* Fix linter ([57bc543](https://github.com/kikobeats/worker-farm-cli/commit/57bc543))
+* Fix typo ([89795c7](https://github.com/kikobeats/worker-farm-cli/commit/89795c7))
+* Improve alias ([c31b488](https://github.com/kikobeats/worker-farm-cli/commit/c31b488))
+* Moar docs ([32f76bc](https://github.com/kikobeats/worker-farm-cli/commit/32f76bc))
+* Refactor ([18beae6](https://github.com/kikobeats/worker-farm-cli/commit/18beae6))
+* Remove lodash.range dep ([a3dc2d5](https://github.com/kikobeats/worker-farm-cli/commit/a3dc2d5))
+* Update meta ([155e4e2](https://github.com/kikobeats/worker-farm-cli/commit/155e4e2))
+* chore(package): update dependencies ([e54296e](https://github.com/kikobeats/worker-farm-cli/commit/e54296e))
+* chore(package): update lodash.findindex to version 4.4.0 ([b5a033f](https://github.com/kikobeats/worker-farm-cli/commit/b5a033f))
+* chore(package): update lodash.findindex to version 4.5.0 ([2c77b06](https://github.com/kikobeats/worker-farm-cli/commit/2c77b06))
+* chore(package): update lodash.findindex to version 4.6.0 ([e284a50](https://github.com/kikobeats/worker-farm-cli/commit/e284a50))
+* chore(package): update lodash.range to version 3.2.0 ([b318713](https://github.com/kikobeats/worker-farm-cli/commit/b318713))
+* chore(package): update update-notifier to version 0.7.0 ([3547867](https://github.com/kikobeats/worker-farm-cli/commit/3547867))
+* chore(package): update update-notifier to version 1.0.0 ([fd87625](https://github.com/kikobeats/worker-farm-cli/commit/fd87625))
+
+
+
 <a name="1.3.3"></a>
 ## 1.3.3 (2016-05-03)
 
