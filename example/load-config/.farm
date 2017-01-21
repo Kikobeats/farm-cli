@@ -1,0 +1,4 @@
+{
+  "maxConcurrentWorkers" : 1,
+  "delay": 5000
+}

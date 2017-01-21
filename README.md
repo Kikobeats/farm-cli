@@ -29,7 +29,7 @@ Options
 
   -d, --delay   [default=1000ms] Waiting time between spawning workers.
 
-  -r, --retries   [default=Infinity] Max number of call requeues after unexpected worker termination.
+  -r, --retries [default=Infinity] Max number of call requeues after unexpected worker termination.
 
 It's possible to load [options] from file, creating '.farm' JSON file on the path of <file>.
 
