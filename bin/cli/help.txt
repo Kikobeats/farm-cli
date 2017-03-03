@@ -1,5 +1,5 @@
 Usage
-  $ worker-farm [options] <file>
+  $ farm [options] <file>
 
 Options
   -n, --cores   [default=numCPUs] Cores to use for spawn workers.
@@ -10,7 +10,7 @@ Options
 
   -r, --retries [default=Infinity] Max number of call requeues after unexpected worker termination.
 
-It's possible to load [options] from file, creating '.farm' JSON file on the path of <file>.
+It's possible to load [options] from file, creating '.farmrc' JSON file on the path of <file>.
 
 Examples
   $ farm process

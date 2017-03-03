@@ -1,11 +1,11 @@
 {
-  "name": "worker-farm-cli",
+  "name": "farm-cli",
   "description": "Launch a farm of worker from the CLI.",
-  "homepage": "https://github.com/Kikobeats/worker-farm-cli",
+  "homepage": "https://github.com/Kikobeats/farm-cli",
   "version": "2.0.0",
   "main": "bin",
   "bin": {
-    "worker-farm": "bin/cli/index.js"
+    "farm": "bin/cli/index.js"
   },
   "author": {
     "email": "josefrancisco.verdu@gmail.com",
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kikobeats/worker-farm-cli.git"
+    "url": "git+https://github.com/kikobeats/farm-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/Kikobeats/worker-farm-cli/issues"
+    "url": "https://github.com/Kikobeats/farm-cli/issues"
   },
   "keywords": [
     "child",
