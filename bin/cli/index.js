@@ -5,6 +5,7 @@
 const pkg = require('../../package.json')
 require('update-notifier')({pkg}).notify()
 const debug = require('debug')(pkg.name)
+const logfmt = require('logfmt')
 
 const workerFarm = require('worker-farm')
 const minimist = require('minimist')
@@ -27,7 +28,7 @@ const {file: fileOpts} = argv
 const {flags: farmOpts} = cli
 const {delayBetweenWorkers} = farmOpts
 const numWorkers = getNumWorkers(farmOpts)
-const workersRange = [...Array(10).keys(numWorkers)]
+const workersRange = [...Array(numWorkers).keys()]
 
 const spawnWorkers = workersRange.map(function (worker) {
   const workerArgs = getWorkerArgs(fileOpts, worker)
@@ -37,7 +38,7 @@ const spawnWorkers = workersRange.map(function (worker) {
 function spawnWorkerDelay (args, delay) {
   function spawnWorker (cb) {
     const parsedArgs = minimist(args)
-    debug('spawning', parsedArgs)
+    debug('spawning %o', parsedArgs)
     farm(parsedArgs, process.exit)
     setTimeout(cb, delay)
   }
@@ -46,9 +47,9 @@ function spawnWorkerDelay (args, delay) {
 }
 
 const filePath = path.resolve(filename)
+debug('initializing %O', farmOpts)
 const farm = workerFarm(farmOpts, filePath)
 
-debug('starting')
 series(spawnWorkers, function () {
   workerFarm.end(farm)
   debug('finished')
