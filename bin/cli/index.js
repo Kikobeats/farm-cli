@@ -5,7 +5,6 @@
 const pkg = require('../../package.json')
 require('update-notifier')({pkg}).notify()
 const debug = require('debug')(pkg.name)
-const logfmt = require('logfmt')
 
 const workerFarm = require('worker-farm')
 const minimist = require('minimist')
