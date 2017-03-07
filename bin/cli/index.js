@@ -25,21 +25,23 @@ if (!filename) cli.showHelp()
 
 const {file: fileOpts} = argv
 const {flags: farmOpts} = cli
+
 const {delayBetweenWorkers} = farmOpts
 const numWorkers = getNumWorkers(farmOpts)
 const workersRange = [...Array(numWorkers).keys()]
+const spawnWorkers = workersRange.map(spawnWorker)
 
-const spawnWorkers = workersRange.map(function (worker) {
-  const workerArgs = getWorkerArgs(fileOpts, worker)
+function spawnWorker (id) {
+  const workerArgs = getWorkerArgs(fileOpts, id)
   return spawnWorkerDelay(workerArgs, delayBetweenWorkers)
-})
+}
 
 function spawnWorkerDelay (args, delay) {
   function spawnWorker (cb) {
     const parsedArgs = minimist(args)
     debug('spawning %o', parsedArgs)
     farm(parsedArgs, process.exit)
-    setTimeout(cb, delay)
+    return process.nextTick(cb, delay)
   }
 
   return spawnWorker
