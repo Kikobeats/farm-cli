@@ -41,7 +41,7 @@ function spawnWorkerDelay (args, delay) {
     const parsedArgs = minimist(args)
     debug('spawning %o', parsedArgs)
     farm(parsedArgs, process.exit)
-    return process.nextTick(cb, delay)
+    return setTimeout(cb, delay)
   }
 
   return spawnWorker
