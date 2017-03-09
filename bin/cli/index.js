@@ -33,18 +33,15 @@ const spawnWorkers = workersRange.map(spawnWorker)
 
 function spawnWorker (id) {
   const workerArgs = getWorkerArgs(fileOpts, id)
-  return spawnWorkerDelay(workerArgs, delayBetweenWorkers)
-}
+  const parsedArgs = minimist(workerArgs)
 
-function spawnWorkerDelay (args, delay) {
-  function spawnWorker (cb) {
-    const parsedArgs = minimist(args)
+  function worker (cb) {
     debug('spawning %o', parsedArgs)
     farm(parsedArgs, process.exit)
-    return setTimeout(cb, delay)
+    return setTimeout(cb, delayBetweenWorkers)
   }
 
-  return spawnWorker
+  return worker
 }
 
 const filePath = path.resolve(filename)
