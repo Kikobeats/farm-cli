@@ -1,3 +1,23 @@
+<a name="2.0.1"></a>
+## 2.0.1 (2017-03-10)
+
+* Add demo ([0ed8d0f](https://github.com/kikobeats/farm-cli/commit/0ed8d0f))
+* Add fibonacci example ([1520ed2](https://github.com/kikobeats/farm-cli/commit/1520ed2))
+* Fix folder name ([9073ed2](https://github.com/kikobeats/farm-cli/commit/9073ed2))
+* Fix generate workers ([4f23921](https://github.com/kikobeats/farm-cli/commit/4f23921))
+* Fix generate workers ([ba2ae08](https://github.com/kikobeats/farm-cli/commit/ba2ae08))
+* Fix linter ([25083bd](https://github.com/kikobeats/farm-cli/commit/25083bd))
+* Fix test ([8c197ac](https://github.com/kikobeats/farm-cli/commit/8c197ac))
+* Refactor ([5487bac](https://github.com/kikobeats/farm-cli/commit/5487bac))
+* Refactor ([d289b23](https://github.com/kikobeats/farm-cli/commit/d289b23))
+* Refactor spawn worker ([90fe06f](https://github.com/kikobeats/farm-cli/commit/90fe06f))
+* Update ([367c732](https://github.com/kikobeats/farm-cli/commit/367c732))
+* worker-farm → farm ([d958556](https://github.com/kikobeats/farm-cli/commit/d958556))
+* chore(package): update update-notifier to version 2.0.0 ([c39a923](https://github.com/kikobeats/farm-cli/commit/c39a923))
+* chore(package): update update-notifier to version 2.1.0 ([b5b4527](https://github.com/kikobeats/farm-cli/commit/b5b4527))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2017-01-21)
 
