@@ -36,7 +36,7 @@ function spawnWorker (id) {
   const parsedArgs = minimist(workerArgs)
 
   function worker (cb) {
-    debug('spawning %o', parsedArgs)
+    debug('creating %o', parsedArgs)
     farm(parsedArgs, process.exit)
     return setTimeout(cb, delayBetweenWorkers)
   }
