@@ -1,3 +1,16 @@
+<a name="2.0.2"></a>
+## 2.0.2 (2017-07-18)
+
+* Improve share memory example ([fd8a98d](https://github.com/kikobeats/farm-cli/commit/fd8a98d))
+* Update README.md ([1324d8e](https://github.com/kikobeats/farm-cli/commit/1324d8e))
+* docs(readme): add Greenkeeper badge ([3a1b52e](https://github.com/kikobeats/farm-cli/commit/3a1b52e))
+* chore(package): update async to version 2.2.0 ([c4cc1c5](https://github.com/kikobeats/farm-cli/commit/c4cc1c5))
+* chore(package): update async to version 2.3.0 ([61aaee2](https://github.com/kikobeats/farm-cli/commit/61aaee2))
+* chore(package): update async to version 2.4.0 ([4c5941e](https://github.com/kikobeats/farm-cli/commit/4c5941e))
+* chore(package): update dependencies ([4717cb0](https://github.com/kikobeats/farm-cli/commit/4717cb0))
+
+
+
 <a name="2.0.1"></a>
 ## 2.0.1 (2017-03-10)
 
