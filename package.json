@@ -37,7 +37,7 @@
     "worker-farm": "~1.5.0"
   },
   "devDependencies": {
-    "async": "~2.5.0",
+    "async": "~2.6.0",
     "coveralls": "latest",
     "git-dirty": "latest",
     "min-delay": "~1.0.1",
