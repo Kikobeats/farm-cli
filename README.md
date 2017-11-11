@@ -1,7 +1,5 @@
 # farm-cli
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/Kikobeats/farm-cli.svg)](https://greenkeeper.io/)
-
 ![Last version](https://img.shields.io/github/tag/Kikobeats/farm-cli.svg?style=flat-square)
 [![Build Status](https://img.shields.io/travis/Kikobeats/farm-cli/master.svg?style=flat-square)](https://travis-ci.org/Kikobeats/farm-cli)
 [![Coverage Status](https://img.shields.io/coveralls/Kikobeats/farm-cli.svg?style=flat-square)](https://coveralls.io/github/Kikobeats/farm-cli)
