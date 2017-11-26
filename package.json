@@ -43,6 +43,8 @@
     "mocha": "latest",
     "mutexify": "latest",
     "nyc": "latest",
+    "pify": "latest",
+    "redis": "latest",
     "should": "latest",
     "standard": "latest",
     "standard-markdown": "latest"
