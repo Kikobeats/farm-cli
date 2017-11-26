@@ -10,7 +10,7 @@
 
 ![](https://i.imgur.com/BKQqOy4.png)
 
-> Launch a farm of worker from the CLI. Based on [worker-farm](https://github.com/rvagg/node-worker-farm).
+> Launch a farm of workers from your CLI. Based on [worker-farm](https://github.com/rvagg/node-worker-farm).
 
 ## Install
 
