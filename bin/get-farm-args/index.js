@@ -8,15 +8,14 @@ const helpPath = path.resolve(__dirname, '../cli/help.txt')
 const loadConfig = require('../load-config')
 const pkg = require('../../package.json')
 const defaults = require('./default')
-const alias = require('./alias')
+const flags = require('./flags')
 
 function readInput (argv) {
   return meow({
     argv,
     pkg,
-    help: fs.readFileSync(helpPath, 'utf8')
-  }, {
-    alias
+    help: fs.readFileSync(helpPath, 'utf8'),
+    flags
   })
 }
 

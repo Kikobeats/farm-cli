@@ -56,15 +56,19 @@ describe('get farm args', function () {
       describe('number', function () {
         const value = 999
         ;[
-          ['d', 'delayBetweenWorkers'],
-          ['n', 'maxConcurrentWorkers'],
-          ['w', 'maxConcurrentCallsPerWorker'],
-          ['r', 'maxRetries']
+          ['-d', 'delayBetweenWorkers'],
+          ['--delay', 'delayBetweenWorkers'],
+          ['-n', 'maxConcurrentWorkers'],
+          ['--cores', 'maxConcurrentWorkers'],
+          ['-w', 'maxConcurrentCallsPerWorker'],
+          ['--workers', 'maxConcurrentCallsPerWorker'],
+          ['-r', 'maxRetries'],
+          ['--retries', 'maxRetries']
         ].forEach(function (arg) {
           const [alias, name] = arg
 
           it(`${alias} for ${name}`, function () {
-            const config = getFarmArgs([`-${alias}`, value])
+            const config = getFarmArgs([alias, value])
             should(config.flags[name]).be.equal(value)
           })
         })
@@ -73,11 +77,12 @@ describe('get farm args', function () {
       describe('boolean', function () {
         const value = false
         ;[
-          ['autostart', 'autoStart']
+          ['--no-autostart', 'autoStart'],
+          ['--no-auto', 'autoStart']
         ].forEach(function (arg) {
           const [alias, name] = arg
           it(`${alias} for ${name}`, function () {
-            const config = getFarmArgs([`--no-${alias}`])
+            const config = getFarmArgs([alias])
             should(config.flags[name]).be.equal(value)
           })
         })

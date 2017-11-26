@@ -2,7 +2,6 @@
 
 const isDirectory = require('is-directory').sync
 const existsFile = require('exists-file').sync
-const alias = require('../get-farm-args/alias')
 const path = require('path')
 const fs = require('fs')
 
@@ -25,16 +24,6 @@ function readConfig (filepath) {
   }
 }
 
-function resolveAlias (config) {
-  return Object.keys(config).reduce(function (acc, key) {
-    const value = config[key]
-    acc[key] = value
-    const keyAlias = alias[key]
-    if (keyAlias) acc[keyAlias] = value
-    return acc
-  }, {})
-}
-
 function loadConfig (filename) {
   if (!filename) return {}
 
@@ -45,7 +34,7 @@ function loadConfig (filename) {
   if (!existsFile(configpath)) return {}
 
   const config = readConfig(configpath)
-  return resolveAlias(config)
+  return config
 }
 
 module.exports = loadConfig
