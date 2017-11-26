@@ -1,3 +1,25 @@
+<a name="2.0.3"></a>
+## 2.0.3 (2017-11-26)
+
+* Improve examples ([a58e2eb](https://github.com/kikobeats/farm-cli/commit/a58e2eb))
+* Update args parsing ([2f14957](https://github.com/kikobeats/farm-cli/commit/2f14957))
+* Update deps ([2366752](https://github.com/kikobeats/farm-cli/commit/2366752))
+* Update README.md ([f4afec5](https://github.com/kikobeats/farm-cli/commit/f4afec5))
+* Update README.md ([46df21a](https://github.com/kikobeats/farm-cli/commit/46df21a))
+* Update README.md ([1525779](https://github.com/kikobeats/farm-cli/commit/1525779))
+* Update README.md ([b0c922e](https://github.com/kikobeats/farm-cli/commit/b0c922e))
+* Update README.md ([e499955](https://github.com/kikobeats/farm-cli/commit/e499955))
+* Update travis builds ([86f01f8](https://github.com/kikobeats/farm-cli/commit/86f01f8))
+* fix(package): update debug to version 3.0.0 ([33f9041](https://github.com/kikobeats/farm-cli/commit/33f9041))
+* fix(package): update debug to version 3.1.0 ([5b40a16](https://github.com/kikobeats/farm-cli/commit/5b40a16))
+* fix(package): update meow to version 4.0.0 ([2f24b8a](https://github.com/kikobeats/farm-cli/commit/2f24b8a))
+* fix(package): update update-notifier to version 2.3.0 ([07a92b8](https://github.com/kikobeats/farm-cli/commit/07a92b8))
+* fix(package): update worker-farm to version 1.5.0 ([cb3a9a7](https://github.com/kikobeats/farm-cli/commit/cb3a9a7))
+* docs(readme): add Greenkeeper badge ([1a241a3](https://github.com/kikobeats/farm-cli/commit/1a241a3))
+* chore(package): update async to version 2.6.0 ([a22f2a5](https://github.com/kikobeats/farm-cli/commit/a22f2a5))
+
+
+
 <a name="2.0.2"></a>
 ## 2.0.2 (2017-07-18)
 
