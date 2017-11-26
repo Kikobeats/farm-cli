@@ -8,7 +8,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/farm-cli.svg?style=flat-square)](https://www.npmjs.org/package/farm-cli)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://paypal.me/Kikobeats)
 
-![](https://i.imgur.com/mVWDurf.png)
+![](https://i.imgur.com/BKQqOy4.png)
 
 > Launch a farm of worker from the CLI. Based on [worker-farm](https://github.com/rvagg/node-worker-farm).
 
