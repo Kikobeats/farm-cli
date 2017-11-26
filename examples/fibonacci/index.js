@@ -1,32 +1,33 @@
 'use strict'
 
-const {whilst} = require('async')
-const minDelay = require('min-delay')(500)
+const {ensureAsync, waterfall, whilst} = require('async')
+const mutexify = require('mutexify')
 
-function fibonacci (num) {
-  if (num <= 1) return 1
-  return fibonacci(num - 1) + fibonacci(num - 2)
+const memo = [0, 1]
+
+const fibonacci = function (n) {
+  var result = memo[n]
+  if (typeof result === 'number') return result
+  result = fibonacci(n - 1) + fibonacci(n - 2)
+  memo[n] = result
+  return result
 }
 
-module.exports = function (opts, done) {
-  const {worker} = opts
-  const condition = () => true
+const lock = mutexify()
+let index = 0
 
-  function log () {
-    const args = [`#${worker}`].concat(...arguments)
-    console.log(...args)
-  }
+module.exports = function (opts, cb) {
+  const {worker: workerNum} = opts
 
   whilst(
-    condition,
-    function (next) {
-      const fn = () => {
-        const result = fibonacci(worker)
-        log(`fibonacci result is ${result}`)
-        next()
-      }
-      minDelay(fn)
-    },
-    process.exit
+    () => true,
+    done => waterfall([
+      next => lock(release => release(next(null, ++index))),
+      ensureAsync((num, next) => {
+        const value = fibonacci(num)
+        console.log(`#${workerNum} fibonacci value=${index} result=${value}`)
+        return next()
+      })
+    ], done)
   )
 }

@@ -16,9 +16,8 @@ function getConfigPath (folder) {
 }
 
 function readConfig (filepath) {
-  const data = fs.readFileSync(filepath, 'utf8')
   try {
-    return JSON.parse(data)
+    return JSON.parse(fs.readFileSync(filepath, 'utf8'))
   } catch (err) {
     return {}
   }

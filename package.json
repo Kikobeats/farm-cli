@@ -37,11 +37,11 @@
     "worker-farm": "~1.5.2"
   },
   "devDependencies": {
-    "async": "~2.6.0",
+    "async": "latest",
     "coveralls": "latest",
     "git-dirty": "latest",
-    "min-delay": "~1.0.1",
     "mocha": "latest",
+    "mutexify": "latest",
     "nyc": "latest",
     "should": "latest",
     "standard": "latest",
