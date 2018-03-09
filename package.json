@@ -34,7 +34,7 @@
     "meow": "~4.0.0",
     "run-series": "~1.1.4",
     "update-notifier": "~2.3.0",
-    "worker-farm": "~1.5.2"
+    "worker-farm": "~1.6.0"
   },
   "devDependencies": {
     "async": "latest",
