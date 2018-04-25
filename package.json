@@ -31,7 +31,7 @@
     "exists-file": "~3.0.2",
     "is-directory": "~0.3.1",
     "is-file": "~1.0.0",
-    "meow": "~4.0.0",
+    "meow": "~5.0.0",
     "run-series": "~1.1.4",
     "update-notifier": "~2.5.0",
     "worker-farm": "~1.6.0"
