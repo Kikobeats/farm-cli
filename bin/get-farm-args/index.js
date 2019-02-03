@@ -29,7 +29,7 @@ function getFarmArgs (argv) {
   const config = loadConfig(file)
   const flags = Object.assign({}, defaults, config, cli.flags)
 
-  return Object.assign(cli, {flags})
+  return Object.assign(cli, { flags })
 }
 
 module.exports = getFarmArgs

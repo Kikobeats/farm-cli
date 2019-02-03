@@ -3,7 +3,7 @@
 'use strict'
 
 const pkg = require('../../package.json')
-require('update-notifier')({pkg}).notify()
+require('update-notifier')({ pkg }).notify()
 const debug = require('debug')(pkg.name)
 
 const workerFarm = require('worker-farm')
@@ -23,10 +23,10 @@ const cli = getFarmArgs(argv.farm)
 const [filename] = cli.input
 if (!filename) cli.showHelp()
 
-const {file: fileOpts} = argv
-const {flags: farmOpts} = cli
+const { file: fileOpts } = argv
+const { flags: farmOpts } = cli
 
-const {delayBetweenWorkers} = farmOpts
+const { delayBetweenWorkers } = farmOpts
 const numWorkers = getNumWorkers(farmOpts)
 const workersRange = [...Array(numWorkers).keys()]
 const spawnWorkers = workersRange.map(spawnWorker)

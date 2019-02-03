@@ -3,7 +3,7 @@
 const shared = []
 
 module.exports = function (opts) {
-  const {worker} = opts
+  const { worker } = opts
   console.log('-----------------------------')
   console.log(`Hello I'm worker #${worker}`)
   const printSharedWorkers = shared.join(' ') || 'none'
