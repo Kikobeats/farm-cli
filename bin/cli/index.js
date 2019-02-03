@@ -26,7 +26,15 @@ if (!filename) cli.showHelp()
 const { file: fileOpts } = argv
 const { flags: farmOpts } = cli
 
-const { delayBetweenWorkers } = farmOpts
+const {
+  maxRetries,
+  autoStart,
+  maxCallTime,
+  maxConcurrentCalls,
+  delayBetweenWorkers,
+  maxConcurrentWorkers,
+  maxConcurrentCallsPerWorker
+} = farmOpts
 const numWorkers = getNumWorkers(farmOpts)
 const workersRange = [...Array(numWorkers).keys()]
 const spawnWorkers = workersRange.map(spawnWorker)
@@ -37,7 +45,18 @@ function spawnWorker (id) {
 
   function worker (cb) {
     debug('creating %o', parsedArgs)
-    farm(parsedArgs, process.exit)
+    farm(
+      {
+        ...parsedArgs,
+        maxConcurrentWorkers,
+        maxConcurrentCallsPerWorker,
+        maxRetries,
+        autoStart,
+        maxCallTime,
+        maxConcurrentCalls
+      },
+      process.exit
+    )
     return setTimeout(cb, delayBetweenWorkers)
   }
 
