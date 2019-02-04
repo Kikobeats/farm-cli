@@ -96,6 +96,14 @@ $ ls -al examples/load-config
 -rw-r--r--@ 1  50 Jan 21  2017 index.js
 ```
 
+### Resilient Errors
+
+If a process unexpectedly dies for any reason, it automagically re-enter.
+
+This can be adjusted using `--retries` flag.
+
+Type `farm --help` to know more.
+
 ### Finishing the Execution
 
 When you want to finish, call the second argument:
