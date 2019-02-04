@@ -11,7 +11,9 @@ module.exports = function (opts, exit) {
   const log = createLog(worker)
 
   log(
-    `Hello I'm worker ${worker} of ${maxWorkers} ${isMaster ? '(master)' : ''}`
+    `Hello I'm worker ${worker + 1} of ${maxWorkers} ${
+      isMaster ? '(master)' : ''
+    }`
   )
 
   shared.push(`#${worker}`)
