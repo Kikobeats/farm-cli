@@ -2,7 +2,7 @@
   "name": "farm-cli",
   "description": "Resilient multi-process architecture from your CLI",
   "homepage": "https://github.com/Kikobeats/farm-cli",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "main": "bin",
   "bin": {
     "farm": "bin/cli/index.js"

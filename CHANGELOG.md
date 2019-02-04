@@ -1,3 +1,22 @@
+<a name="3.0.0"></a>
+# 3.0.0 (2019-02-04)
+
+* Add fibonacci multicore ([f5f121f](https://github.com/kikobeats/farm-cli/commit/f5f121f))
+* Improve fibonacci example ([53e64d2](https://github.com/kikobeats/farm-cli/commit/53e64d2))
+* tweaks ([303bf5d](https://github.com/kikobeats/farm-cli/commit/303bf5d))
+* docs: add errors ([5f78335](https://github.com/kikobeats/farm-cli/commit/5f78335))
+* docs: improve documentation ([ce5c817](https://github.com/kikobeats/farm-cli/commit/ce5c817))
+* feat: ensure to exit workers before exit ([f0de96c](https://github.com/kikobeats/farm-cli/commit/f0de96c))
+* feat: pass farm options ([ed08ed1](https://github.com/kikobeats/farm-cli/commit/ed08ed1))
+* feat: rename flags ([9848c01](https://github.com/kikobeats/farm-cli/commit/9848c01))
+* build: fix linter ([57ed1e5](https://github.com/kikobeats/farm-cli/commit/57ed1e5))
+* fix(package): update meow to version 5.0.0 ([3582475](https://github.com/kikobeats/farm-cli/commit/3582475))
+* fix(package): update update-notifier to version 2.4.0 ([d603bf2](https://github.com/kikobeats/farm-cli/commit/d603bf2))
+* fix(package): update update-notifier to version 2.5.0 ([ea10ecc](https://github.com/kikobeats/farm-cli/commit/ea10ecc))
+* fix(package): update worker-farm to version 1.6.0 ([70846d2](https://github.com/kikobeats/farm-cli/commit/70846d2))
+
+
+
 <a name="2.0.3"></a>
 ## 2.0.3 (2017-11-26)
 
