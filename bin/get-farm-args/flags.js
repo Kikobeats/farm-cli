@@ -5,10 +5,10 @@ module.exports = {
     alias: ['delay']
   },
   maxConcurrentWorkers: {
-    alias: ['process', 'p', 'cores', 'n']
+    alias: ['process', 'processes', 'p']
   },
   maxConcurrentCallsPerWorker: {
-    alias: ['threads', 't', 'workers', 'w']
+    alias: ['thread', 'threads', 't']
   },
   maxRetries: {
     alias: ['retries']

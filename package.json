@@ -1,6 +1,6 @@
 {
   "name": "farm-cli",
-  "description": "Launch a farm of worker from the CLI.",
+  "description": "Resilient multi-process architecture from your CLI",
   "homepage": "https://github.com/Kikobeats/farm-cli",
   "version": "2.0.3",
   "main": "bin",
@@ -51,7 +51,7 @@
     "standard-markdown": "latest"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 8"
   },
   "files": [
     "bin"

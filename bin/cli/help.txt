@@ -2,11 +2,11 @@ Usage
   $ farm [options] <file> [file-opts]
 
 Options
-  --process [default=numCPUs] Number of spawn process to create.
+  --processes [default=numCPUs] Number of child processes.
 
-  --threads [default=1] Number of threads per spawned process.
+  --threads [default=1] Number of threads per child process.
 
-  --delay   [default=1000ms] Waiting time between spawning process..
+  --delay   [default=1000ms] Waiting time between spawning process.
 
   --retries [default=Infinity] Max number of call requeues after unexpected process termination.
 

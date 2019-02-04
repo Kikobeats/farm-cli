@@ -8,7 +8,7 @@
 
 ![](https://i.imgur.com/BKQqOy4.png)
 
-`farm` allows you create a multi-process architecture from your CLI. It's based on [worker-farm](https://github.com/rvagg/node-worker-farm).
+`farm` allows allows you to create a resilient multi-process architecture from your CLI. It's based on [worker-farm](https://github.com/rvagg/node-worker-farm).
 
 > **Note**: See [examples](/examples) for common user case.
 
@@ -56,10 +56,10 @@ $ farm examples/basic
 
 By default, the library will create as many processes as number of CPUs in the machine and a thread per process.
 
-Let's use the same example but this time specifying multiple theads per process
+Let's use the same example but this time specifying multiple threads per process
 
 ```bash
-$ farm examples/basic -w 2
+$ farm examples/basic --threads=2
 
 [#0] Hello I'm worker 1 of 8 (master)
 [#1] Hello I'm worker 2 of 8
