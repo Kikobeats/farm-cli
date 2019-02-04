@@ -2,19 +2,29 @@
 
 const shared = []
 
-module.exports = function (opts, cb) {
-  const {
-    isMaster,
-    worker,
-    maxConcurrentCallsPerWorker,
-    maxConcurrentWorkers
-  } = opts
-  const total = maxConcurrentCallsPerWorker * maxConcurrentWorkers
-  console.log('-----------------------------')
-  console.log(`Hello I'm worker #${worker} ${isMaster ? '(master)' : ''}`)
-  const printSharedWorkers = shared.join(' ') || 'none'
-  console.log(`The shared variable was visited by ${printSharedWorkers}`)
+const humanizeList = require('humanize-list')
+
+const createLog = n => (...args) => console.log(`[#${n}] ${args}`)
+
+module.exports = function (opts, exit) {
+  const { isMaster, maxWorkers, worker } = opts
+  const log = createLog(worker)
+
+  log(
+    `Hello I'm worker ${worker} of ${maxWorkers} ${isMaster ? '(master)' : ''}`
+  )
+
   shared.push(`#${worker}`)
-  console.log('-----------------------------\n')
-  if (total === worker + 1) return cb()
+  log("I' visiting the shared variable!")
+
+  log(
+    shared.length
+      ? `The shared variable was visited by ${humanizeList(shared)}`
+      : `The shared variable never was visited`
+  )
+
+  setTimeout(() => {
+    log('bye!')
+    exit()
+  }, 3000)
 }

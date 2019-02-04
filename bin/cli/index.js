@@ -27,14 +27,13 @@ const { file: fileOpts } = argv
 const { flags: farmOpts } = cli
 
 const {
-  maxRetries,
-  autoStart,
-  maxCallTime,
-  maxConcurrentCalls,
   delayBetweenWorkers,
   maxConcurrentWorkers,
   maxConcurrentCallsPerWorker
 } = farmOpts
+
+let runningWorkers = 0
+
 const numWorkers = getNumWorkers(farmOpts)
 const workersRange = [...Array(numWorkers).keys()]
 const spawnWorkers = workersRange.map(spawnWorker)
@@ -45,18 +44,20 @@ function spawnWorker (id) {
 
   function worker (cb) {
     debug('creating %o', parsedArgs)
+    ++runningWorkers
     farm(
       {
-        ...parsedArgs,
-        maxConcurrentWorkers,
-        maxConcurrentCallsPerWorker,
-        maxRetries,
-        autoStart,
-        maxCallTime,
-        maxConcurrentCalls
+        maxWorkers: maxConcurrentCallsPerWorker * maxConcurrentWorkers,
+        ...parsedArgs
       },
-      process.exit
+      err => {
+        if (--runningWorkers === 0) {
+          debug('close')
+          return process.exit(err)
+        }
+      }
     )
+
     return setTimeout(cb, delayBetweenWorkers)
   }
 
@@ -64,10 +65,11 @@ function spawnWorker (id) {
 }
 
 const filePath = path.resolve(filename)
+
 debug('initializing %O', farmOpts)
 const farm = workerFarm(farmOpts, filePath)
 
 series(spawnWorkers, function () {
+  debug('end')
   workerFarm.end(farm)
-  debug('finished')
 })

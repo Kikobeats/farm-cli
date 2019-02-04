@@ -40,6 +40,7 @@
     "async": "latest",
     "coveralls": "latest",
     "git-dirty": "latest",
+    "humanize-list": "latest",
     "mocha": "latest",
     "mutexify": "latest",
     "nyc": "latest",
