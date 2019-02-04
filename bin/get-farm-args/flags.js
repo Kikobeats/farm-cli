@@ -2,16 +2,16 @@
 
 module.exports = {
   delayBetweenWorkers: {
-    alias: ['d', 'delay']
+    alias: ['delay']
   },
   maxConcurrentWorkers: {
-    alias: ['n', 'cores']
+    alias: ['process', 'p', 'cores', 'n']
   },
   maxConcurrentCallsPerWorker: {
-    alias: ['w', 'workers']
+    alias: ['threads', 't', 'workers', 'w']
   },
   maxRetries: {
-    alias: ['r', 'retries']
+    alias: ['retries']
   },
   autoStart: {
     alias: ['autostart', 'auto']

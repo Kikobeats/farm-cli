@@ -37,7 +37,7 @@ const createLog = n => (...args) => console.log(`[#${n}] ${args}`)
 
 module.exports = function (opts, exit) {
   const { isMaster, maxWorkers, worker } = opts
-  log(`I'm worker ${worker} of ${maxWorkers} ${isMaster ? '(master)' : ''}`)
+  log(`I'm worker ${worker + 1} of ${maxWorkers} ${isMaster ? '(master)' : ''}`)
 }
 ```
 
@@ -75,6 +75,15 @@ This time the farm has 2 threads per process (2 threads * 4 cores = 8 workers).
 
 Type `farm --help` to know more.
 
+### Passing File Arguments
+
+The parameters passed after the filename will used as file arguments:
+
+```
+$ farm examples/fiboniacci --memoize
+[#0] Enable memoize mode!
+```
+
 ### Load Configuration File
 
 The same things passed to `farm` from a `.farmrc` file created in the same directory.
@@ -94,24 +103,15 @@ When you want to finish, call the second argument:
 ```js
 module.exports = function (opts, exit) {
   const { worker } = opts
-  
-	setTimeout(() => {
-	  console.log(`[#${worker}] bye bye!`)
-	  exit()
-	})
+
+  setTimeout(() => {
+    console.log(`[#${worker}] bye bye!`)
+    exit()
+  })
 }
 ```
 
 It will finish gracefully when all the threads exit.
-
-### Passing File Arguments
-
-The parameters passed after the filename will used as file arguments:
-
-```
-$ farm examples/fiboniacci --memoize
-[#0] Enable memoize mode!
-```
 
 ### Debug Mode
 
@@ -123,4 +123,7 @@ DEBUG=farm examples/fiboniacci --memoize
 
 ## License
 
-MIT © [Kiko Beats](http://kikobeats.com)
+**farm-cli** © [Kiko Beats](https://kikobeats.com), released under the [MIT](https://github.com/Kikobeats/farm-cli/blob/master/LICENSE.md) License.<br>
+Authored and maintained by Kiko Beats with help from [contributors](https://github.com/Kikobeats/farm-cli/contributors).
+
+> [kikobeats.com](https://kikobeats.com) · GitHub [Kiko Beats](https://github.com/Kikobeats) · Twitter [@Kikobeats](https://twitter.com/Kikobeats)

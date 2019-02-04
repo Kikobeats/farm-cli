@@ -41,9 +41,7 @@ describe('get farm args', function () {
 
       describe('boolean', function () {
         const value = false
-        ;[
-          'autoStart'
-        ].forEach(function (arg) {
+        ;['autoStart'].forEach(function (arg) {
           it(arg, function () {
             const config = getFarmArgs([`--no-${arg}`])
             should(config.flags[arg]).be.equal(value)
@@ -53,16 +51,12 @@ describe('get farm args', function () {
     })
 
     describe('using alias', function () {
-      describe('number', function () {
+      describe.skip('number', function () {
         const value = 999
         ;[
-          ['-d', 'delayBetweenWorkers'],
           ['--delay', 'delayBetweenWorkers'],
-          ['-n', 'maxConcurrentWorkers'],
           ['--cores', 'maxConcurrentWorkers'],
-          ['-w', 'maxConcurrentCallsPerWorker'],
-          ['--workers', 'maxConcurrentCallsPerWorker'],
-          ['-r', 'maxRetries'],
+          ['--threads', 'maxConcurrentCallsPerWorker'],
           ['--retries', 'maxRetries']
         ].forEach(function (arg) {
           const [alias, name] = arg
@@ -76,16 +70,15 @@ describe('get farm args', function () {
 
       describe('boolean', function () {
         const value = false
-        ;[
-          ['--no-autostart', 'autoStart'],
-          ['--no-auto', 'autoStart']
-        ].forEach(function (arg) {
-          const [alias, name] = arg
-          it(`${alias} for ${name}`, function () {
-            const config = getFarmArgs([alias])
-            should(config.flags[name]).be.equal(value)
-          })
-        })
+        ;[['--no-autostart', 'autoStart'], ['--no-auto', 'autoStart']].forEach(
+          function (arg) {
+            const [alias, name] = arg
+            it(`${alias} for ${name}`, function () {
+              const config = getFarmArgs([alias])
+              should(config.flags[name]).be.equal(value)
+            })
+          }
+        )
       })
     })
   })

@@ -1,18 +1,18 @@
 Usage
-  $ farm [options] <file>
+  $ farm [options] <file> [file-opts]
 
 Options
-  -n, --cores   [default=numCPUs] Cores to use for spawn workers.
+  --process [default=numCPUs] Number of spawn process to create.
 
-  -w, --workers [default=1] Workers to spawn per each core.
+  --threads [default=1] Number of threads per spawned process.
 
-  -d, --delay   [default=1000ms] Waiting time between spawning workers.
+  --delay   [default=1000ms] Waiting time between spawning process..
 
-  -r, --retries [default=Infinity] Max number of call requeues after unexpected worker termination.
+  --retries [default=Infinity] Max number of call requeues after unexpected process termination.
 
 It's possible to load [options] from file, creating '.farmrc' JSON file on the path of <file>.
 
 Examples
-  $ farm process
-  $ farm -w 1 -n 1 process
-  $ farm -w 1 -n 1 process foo=bar
+  $ farm examples/basic             # just call a file
+  $ farm --threads=4 examples/basic # specifing number of threads
+  $ farm examples/basic --memoize   # passing specific file arguments
