@@ -37,6 +37,7 @@ const createLog = n => (...args) => console.log(`[#${n}] ${args}`)
 
 module.exports = function (opts, exit) {
   const { isMaster, maxWorkers, worker } = opts
+  const log = createLog(worker)
   log(`I'm worker ${worker + 1} of ${maxWorkers} ${isMaster ? '(master)' : ''}`)
 }
 ```
