@@ -27,7 +27,7 @@
     "worker"
   ],
   "dependencies": {
-    "debug": "~4.2.0",
+    "debug": "~4.3.1",
     "exists-file": "~3.0.2",
     "is-directory": "~0.3.1",
     "is-file": "~1.0.0",
