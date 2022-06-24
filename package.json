@@ -33,7 +33,7 @@
     "is-file": "~1.0.0",
     "meow": "~9.0.0",
     "run-series": "~1.1.8",
-    "update-notifier": "~5.1.0",
+    "update-notifier": "~6.0.2",
     "worker-farm": "~1.7.0"
   },
   "devDependencies": {
